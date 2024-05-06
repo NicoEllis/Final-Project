@@ -6,7 +6,7 @@ class DrawingApp:
         self.root = root
         self.root.title("Drawing App")
         
-        self.canvas = tk.Canvas(self.root, width= 400, height= 400, bg="white")
+        self.canvas = tk.Canvas(self.root, width=400, height=400, bg="white")
         self.canvas.pack(fill=tk.BOTH, expand=True)
         
         self.brush_color = "black"
@@ -18,7 +18,7 @@ class DrawingApp:
         
     def setup_ui(self):
         color_frame = tk.Frame(self.root)
-        color_frame.pack(side=tk.LEFT, padx= 5, pady= 5)
+        color_frame.pack(side=tk.LEFT, padx=5, pady=5)
         
         self.color_label = tk.Label(color_frame, text="Color:")
         self.color_label.pack(pady=(0,5))
@@ -27,12 +27,12 @@ class DrawingApp:
         self.color_btn.pack()
         
         brush_frame = tk.Frame(self.root)
-        brush_frame.pack(side=tk.LEFT, padx= 5, pady= 5)
+        brush_frame.pack(side=tk.LEFT, padx=5, pady=5)
         
         self.brush_label = tk.Label(brush_frame, text="Brush Size:")
         self.brush_label.pack(pady=(0,5))
         
-        self.brush_slider = tk.Scale(brush_frame, from_= 1, to= 10, orient=tk.HORIZONTAL, command=self.change_brush_size)
+        self.brush_slider = tk.Scale(brush_frame, from_=1, to=10, orient=tk.HORIZONTAL, command=self.change_brush_size)
         self.brush_slider.set(self.brush_size)
         self.brush_slider.pack()
         
